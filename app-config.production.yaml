@@ -18,6 +18,10 @@ backend:
     keys:
       - secret: ${BACKEND_SECRET}
 
+auth:
+  providers:
+    guest: {}
+
 kubernetes:
   serviceLocatorMethod:
     type: multiTenant
