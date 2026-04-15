@@ -20,7 +20,8 @@ backend:
 
 auth:
   providers:
-    guest: {}
+    guest:
+      dangerouslyAllowOutsideDevelopment: true
 
 kubernetes:
   serviceLocatorMethod:
