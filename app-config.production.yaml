@@ -19,9 +19,15 @@ backend:
       - secret: ${BACKEND_SECRET}
 
 auth:
+  environment: production
   providers:
-    guest:
-      dangerouslyAllowOutsideDevelopment: true
+    github:
+      production:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: usernameMatchingUserEntityName
 
 kubernetes:
   serviceLocatorMethod:
