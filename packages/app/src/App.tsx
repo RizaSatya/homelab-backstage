@@ -7,6 +7,8 @@ import { githubAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInPageBlueprint } from '@backstage/plugin-app-react';
 import { SignInPage } from '@backstage/core-components';
 import { createFrontendModule } from '@backstage/frontend-plugin-api';
+import { crossplaneResourcesPlugin } from '@terasky/backstage-plugin-crossplane-resources-frontend/alpha';
+
 
 const signInPage = SignInPageBlueprint.make({
   params: {
@@ -31,6 +33,7 @@ export default createApp({
     notificationsPlugin,
     signalsPlugin,
     navModule,
+    crossplaneResourcesPlugin,
     createFrontendModule({
       pluginId: 'app',
       extensions: [signInPage],

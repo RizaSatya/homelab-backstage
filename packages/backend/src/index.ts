@@ -61,4 +61,8 @@ backend.add(import('@backstage/plugin-kubernetes-backend'));
 backend.add(import('@backstage/plugin-notifications-backend'));
 backend.add(import('@backstage/plugin-signals-backend'));
 
+// crossplane resource plugins
+backend.add(import('@terasky/backstage-plugin-crossplane-resources-backend'));
+
+
 backend.start();

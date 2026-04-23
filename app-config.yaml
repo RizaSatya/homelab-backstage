@@ -126,3 +126,6 @@ kubernetes:
 permission:
   # setting this to `false` will disable permissions
   enabled: true
+
+crossplane:
+  enablePermissions: true
